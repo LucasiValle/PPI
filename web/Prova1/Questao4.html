@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeiras</title>
+
+    <style>
+        .container {
+           
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+     }
+
+        .box {
+            
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        @media (max-width: 600px){
+            .container{
+                
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+
+        .box:hover {
+           
+            transform: scale(1.05);
+            width: 310px;
+            height: 330px;
+        }
+
+        #Italia {
+           
+            padding: 10px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .VerdeItalia {
+            background-color: green;
+            
+            width: 90px;
+            height: 200px;
+        }
+        .BrancoItalia {
+            background-color: white;
+            
+            width: 90px;
+            height: 200px;
+        }
+
+        .VermelhoItalia {
+            background-color: red;
+            
+            width: 90px;
+            height: 200px;
+        }
+    
+       
+
+        #França {
+            padding: 10px;
+            
+        }
+
+        .VermelhoFranca {
+            background-color: red;
+            
+            width: 300px;
+            height: 80px;
+           
+        }
+
+        .BrancoFranca {
+            background-color: white;
+            
+            width: 300px;
+            height: 80px;
+        }
+
+        .AzulFranca {
+            background-color: blue;
+            
+            width: 300px;
+            height: 80px;
+            
+        }
+
+        #Japão {
+           
+            padding: 10px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            
+        }
+
+        .BrancoJapao {
+          
+            background-color: white;
+            width: 300px;
+            height: 225px;
+            border: 1px solid black;
+        }
+
+        .Circulo {
+           
+            width: 100px;
+            height: 100px;
+            margin: 50px auto 20px auto;
+            background-color: red;
+            border-radius: 50%;
+        }
+   
+   </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="Italia">
+            <div class="VerdeItalia"></div>
+            <div class="BrancoItalia"></div>
+            <div class="VermelhoItalia"></div>
+        </div>
+        <div class="box" id="França">
+            <div class="VermelhoFranca"></div>
+            <div class="BrancoFranca"></div>
+            <div class="AzulFranca"></div>
+        </div>
+        <div class="box" id="Japão">
+            <div class="BrancoJapao">
+                <div class="Circulo"></div>
+            </div>  
+        </div>
+    </div>
+</body>
+</html>
