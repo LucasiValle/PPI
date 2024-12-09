@@ -20,6 +20,7 @@
             <input type="text" name="nome" id="nome">
             <label for="email">Email</label>
             <input type="text" name="email" id="email">
+            <input type = "text" name= "acao" value= "cadastrar" hidden>
             <input type="submit" value="Adicionar">
         </form>
     </fieldset>

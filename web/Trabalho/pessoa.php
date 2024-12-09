@@ -23,15 +23,26 @@ function insere_usuario ($nome ,$email):void{
     
 }
 
-function recupera_lista_usuario():void{
+function getUsuarios(){
 
     $db = conectdb();
     $sql = "select * from usuarios";
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $resultado = $stmt-> fetchAll(PDO::FETCH_ASSOC);
-    var_dump($resultado);
+    return ($resultado);
+    
 
 }
-recupera_lista_usuario();
+function getUsuario($id){
+
+    $db = conectdb();
+    $sql = "select * from usuarios where id = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(1,$id);
+    $stmt->execute();
+    $usuario = $stmt-> fetch (PDO::FETCH_ASSOC);
+    return ($usuario);
+
+}
 ?>
