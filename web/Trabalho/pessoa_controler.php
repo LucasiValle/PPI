@@ -26,7 +26,7 @@ if (isset ($_POST ["acao"]) && $_POST["acao"] == "editar" ){
         $email = $_POST["email"];
         
         // Chama a função de edição
-        editar_usuario($id, $nome, $email);
+        editar_pessoa($id, $nome, $email);
         header("Location: listar.php");
         exit();
     }
